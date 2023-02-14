@@ -1,5 +1,6 @@
 let menu = document.querySelector('#menu-btn')
 let navbar = document.querySelector('.navbar')
+const modeBtn = document.querySelector('#darkmode-btn')
 
 
 // Expanding Menu items
@@ -50,6 +51,12 @@ document.querySelector('.home').onmouseleave = (e) => {
 }
 // Mouse hover effect ends
 
+// Dark Mode toggle
+modeBtn.onclick = () => {
+  console.log('clicked')
+  document.getElementsByTagName('body')[0].classList.toggle('dark')
+}
+// Dark Mode toggle ends
 
 
 // Swiper effects starts

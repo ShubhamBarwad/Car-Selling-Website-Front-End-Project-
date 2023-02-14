@@ -7,7 +7,10 @@
     --border: .1rem solid rgba(0,0,0,0.1);
     --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
     --light-color: #666;
-
+    --dark-black: #121212;
+    --light-black: #1f1f1f;
+    --dm-white: #cacaca;
+    --dm-red: #bf0000;
 }
 
 *{
@@ -77,7 +80,7 @@ section{
 }
 .header .logo{
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--dm-red);
     font-weight: bolder;
 }
 .header .logo span{
@@ -230,6 +233,7 @@ section{
 }
 .icons-container .icons:hover{
     background: var(--black);
+    scale: 1.025;
 }
 .icons-container .icons:hover i{
     background: var(--yellow);
@@ -512,11 +516,86 @@ section{
     padding-right: 2rem;
     
 }
+.darkmode-btn{
+    background-color: var(--yellow);
+    position: fixed;
+    bottom: 5rem; right: 5rem;
+    height: 8rem; width: 8rem;
+    border-radius: 50%;
+    font-size: rem;
+    opacity: .7;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.darkmode-btn:hover{
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    opacity: 1;
+}
 
 
 
 
+/* Dark Mode */
+body.dark{
+    background-color: var(--dark-black);
+}
+/* body.dark .btn{
+    background: --dmre;
+} */
+body.dark header{
+    background-color: var(--light-black);
+}
+body.dark .navbar a{
+    color: var(--dm-white);
+}
+body.dark .box:not(.vehicles .box, .footer .box){
+    transition-duration: 200ms;
+    background: var(--light-black);
+    color: var(--dm-white);
+}
+body.dark .icons-container{
+    background: var(--light-black);
+}
+body.dark .icons-container .icons:hover{
+    background-color: var(--light-color);
+}
+body.dark .icons-container .icons{
+    background: var(--dark-black);
+}
+body.dark h1{
+    color: var(--light-yellow);
+}
+body.dark h3, body.dark .price{
+    color: var(--dm-white) !important;
+}
+body.dark .heading span::before{
+    background: var(--dm-red);
+}
+body.dark .swiper-pagination-bullet{
+    background: var(--dm-white) !important;
+}
+body.dark .footer{
+    background: var(--light-black);
+}
+body.dark .login-form-container{
+    background-color: rgba(31, 31, 31, 0.9);
+}
+body.dark .login-form-container form{
+    background: var(--dark-black);
+}
+body.dark .login-form-container #close-login-form{
+    color: var(--dm-white);
+}
+body.dark .footer .box-container .box a i{
+    color: var(--yellow);
+}
 
+/* Dark Mode */
 
 /* Media Queries */
 @media(max-width:991px){
@@ -571,4 +650,11 @@ section{
     .heading{
         font-size: 3rem;
     }
+}
+
+/* Animations */
+@keyframes bounce {
+    0% {transform: translateY(5px)}
+    50% {transform: translateY(-5px)}
+    100%{transform: translateY(5px)};
 }
