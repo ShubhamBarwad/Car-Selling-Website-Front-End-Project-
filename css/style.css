@@ -12,6 +12,7 @@
     --dm-white: #cacaca;
     --dm-red: #bf0000;
     --dm-gray:#2d2d2d;
+    --dm-yellow: #61581b;
 }
 
 *{
@@ -520,8 +521,8 @@ section{
 .darkmode-btn{
     background-color: var(--yellow);
     position: fixed;
-    bottom: 5rem; right: 5rem;
-    height: 8rem; width: 8rem;
+    bottom: 3rem; right: 3rem;
+    height: 5rem; width: 5rem;
     border-radius: 50%;
     font-size: rem;
     opacity: .7;
@@ -532,9 +533,9 @@ section{
     justify-content: center;
 }
 .darkmode-btn:hover{
-    animation-name: bounce;
+    /* animation-name: bounce;
     animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-duration: 1s; */
     opacity: 1;
 }
 
@@ -566,13 +567,17 @@ body.dark .icons-container .icons{
     background: var(--dark-black);
 }
 body.dark h1{
+    color: var(--dm-red);
+}
+body.dark .home h1{
     color: var(--light-yellow);
 }
 body.dark h3, body.dark .price{
     color: var(--dm-white) !important;
 }
 body.dark .heading span::before{
-    background: var(--dm-red);
+    /* background: var(--dm-yellow); */
+    background: none;
 }
 body.dark .swiper-pagination-bullet{
     background: var(--dm-white) !important;
@@ -631,6 +636,9 @@ body.dark .footer .box-container .box a i{
         background: #fff;
         border-top: var(--border);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    body.dark .header .navbar{
+        background: var(--light-black);
     }
     .header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
