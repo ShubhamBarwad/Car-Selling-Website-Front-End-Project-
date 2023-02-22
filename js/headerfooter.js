@@ -1,15 +1,22 @@
 const header = document.querySelector('.header')
+const footer = document.querySelector('.footer')
 let menu
 let navbar
-const renderHeader = () => {
+const renderHeaderFooter = () => {
     fetch('/header.html').then(Response => {
         Response.text().then((data) => {
             header.innerHTML = (data)
         })
     })
+
+    fetch('/footer.html').then(Response => {
+        Response.text().then((data) => {
+            footer.innerHTML = (data)
+        })
+    })
 }
 
-renderHeader()
+renderHeaderFooter()
 
 
 // Expanding Menu items
