@@ -678,12 +678,6 @@ section{
     display: flex;
     justify-content: space-between;
 }
-/* .tab-list:last-child{
-    border-right: solid 2px var(--dm-light-gray);
-}
-.tab-list:first-child{
-    border-left: solid 2px var(--dm-light-gray);
-} */
 .tab-list a{
     font-size: 1.4rem;
     flex: 1;
@@ -691,9 +685,6 @@ section{
     color: var(--light-color);
     padding: 2rem 0;
     text-align: center;
-    /* border-left: solid 1px var(--dm-light-gray);
-    border-right: solid 1px var(--dm-light-gray);
-    border-spacing: 0; */
 }
 .tab-list a.active{
     background-color: var(--dm-light-gray);
@@ -773,11 +764,13 @@ body.dark h1{
 body.dark .home h1{
     color: var(--light-yellow);
 }
-body.dark h3, body.dark .price{
+body.dark h3, body.dark .price, body.dark .product-box p, body.dark .details p{
     color: var(--dm-white) !important;
 }
+body.dark .tab-content h3{
+    color: white;
+}
 body.dark .heading span::before{
-    /* background: var(--dm-yellow); */
     background: none;
 }
 body.dark .swiper-pagination-bullet{
@@ -797,6 +790,12 @@ body.dark .login-form-container #close-login-form{
 }
 body.dark .footer .box-container .box a i{
     color: var(--yellow);
+}
+body.dark .product-box, body.dark .details .tab-content-div, body.dark .details .tab-items.active{
+    background: var(--dm-gray);
+}
+body.dark .gallery .img-div{
+    border: 1px solid var(--dm-gray);
 }
 
 /* Dark Mode */
