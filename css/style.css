@@ -606,7 +606,7 @@ section{
 }
 .product-img{
     background: #fdfdfd;
-    border-radius: 5rem;
+    border-radius: 3rem;
     box-shadow: var(--box-shadow);
 }
 .product-img .color-choice{
@@ -729,7 +729,31 @@ section{
     padding: 2rem;
     border-radius: 1rem;
 }
-
+.filters{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.filters > *{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+}
+.search-bar input{
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.search-bar i{
+    font-size: 2.1rem;
+    background-color: var(--light-color);
+    padding: 1rem 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
 
 
 

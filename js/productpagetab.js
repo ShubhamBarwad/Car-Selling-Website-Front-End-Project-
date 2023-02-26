@@ -12,6 +12,7 @@ Array.from(colorChoice).forEach(elem => {
     
 })
 
+// Tab Code
 Array.from(tabContent).forEach(elem => {
     let idItem = elem.children[0].innerText
     elem.setAttribute('id', idItem)
